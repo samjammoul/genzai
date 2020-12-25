@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+html {
+    display: table;
+    margin: auto;
+}
+.input-field{
+     outline: none;
+     border: none;
+     border:solid 3px #6356A1;
+     border-radius: 130px;
+     height: 40px;
+ }
+
+
+
+.input-field input{
+    border-bottom: none;
+    box-shadow: none;
+    padding: 12px 41px 11px 28px;
+    margin: -21px 20px 11px -5px;
+    width: 267px;
+    height: 14px;
+
+
+}
+
+.input-field input:focus{
+    border-bottom: none ;
+    box-shadow: none;
+
+}
+
+.mat-form-field{
+
+    margin: 3px 18px 20px 10px; ;
+
+}
+
+.form{
+    padding: 0 0 0 78px;
+}
+.item{
+    padding: 0 0 8px 0;
+
+}
+
+.errorText{
+    max-width: 315px;
+    margin: 0px 0px 10px 0px;
+}
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+.mat-form-field-label {
+    caret-color: green ;
+    font-size: 20px;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+
+  opacity: 0;
+}
+
+::ng-deep .mat-form-field-label {
+    margin: -12px 0 0 17px ;
+}
+.mat-error{
+    margin: 0 0 0 13px ;
+}
+
+
+.card{
+    transition: none !important;
+    box-shadow: none !important;
+}
+
+
+

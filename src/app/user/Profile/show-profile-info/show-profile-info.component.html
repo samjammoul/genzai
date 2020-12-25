@@ -1,0 +1,13 @@
+
+        <div  fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="start"  >
+            <mat-card >Username: {{userInfo.userName}}</mat-card>
+            <mat-card>Email: {{userInfo.email}}</mat-card>
+            <mat-card>Address: {{userInfo.address}}</mat-card>
+            <mat-card>Company address: {{userInfo.companyAddress}}</mat-card>
+            <mat-card>Bank account: {{userInfo.bankAccount}}</mat-card>
+            <mat-card>Phone number: {{userInfo.phoneNumber}}</mat-card>
+            <mat-card>Billing address: {{userInfo.billingAddress}}</mat-card>
+            <mat-card>The subscription : {{userInfo.subscription}}</mat-card>
+            <a fxLayoutAlign="center center" (click)="openDialog()">I want to change my password</a>
+        </div>
+

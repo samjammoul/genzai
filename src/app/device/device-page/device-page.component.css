@@ -1,0 +1,53 @@
+h1{
+    color: #6356A1;
+    font-family: "Poppins Medium", serif;
+    font-size: 28px;
+}
+
+.card{
+    transition: none !important;
+    box-shadow: none !important;
+}
+
+.camera-icon{
+ margin: 0px 20px 0px -6px;
+}
+.label{
+    margin: 0 0 0 142px;
+
+}
+.label-main{
+    width: 100%;
+    text-align:center;
+
+}
+@media only screen and (max-width: 850px) {
+    .container{
+        padding: 50px 50px 50px 50px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .img{
+        height: 137px;
+    }
+}
+.container{
+    margin: 20px 0 30px 20px;
+    padding: 0 0 0 0;
+}
+.menu-text{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+.mat-card{
+    background-color: #3b9b48;
+    width: 475px;
+    height: 218px;
+    border-radius: 28px;
+    margin-bottom: 50px;
+}
+.card-content{
+    margin: 0px 0px 0px 20px;
+    padding: 37px 0px 0 0;
+}
+

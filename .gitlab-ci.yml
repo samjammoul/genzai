@@ -1,0 +1,31 @@
+image: node:latest
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install --silent
+
+stages:
+  - test
+  - build
+  - documentation
+
+job 1:
+  stage: test
+  script: CHROME_BIN=/snap/bin/chromium node --max-old-space-size=2048 node_modules/.bin/ng test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+
+release_job:
+  stage: build
+  script: node --max-old-space-size=2048 node_modules/.bin/ng build --prod --aot
+  artifacts:
+    name: "project-$CI_COMMIT_REF_NAME"
+    paths:
+      - documentation
+
+
+job 2:
+  stage: documentation
+  script: npm run compodoc

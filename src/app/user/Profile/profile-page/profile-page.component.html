@@ -1,0 +1,41 @@
+
+<h1>Profile</h1>
+<div fxLayout="column" fxLayoutAlign="center center" fxFlexFill >
+    <div fxLayout="column" fxLayoutAlign="center center" >
+
+
+        <div fxLayoutAlign="center" >
+            <mat-card class="card" >
+                <mat-card-content >
+                    <div fxLayoutAlign="end start">
+                        <mat-icon  (click)="editAble = !editAble">edit</mat-icon>
+                    </div>
+                    <div fxLayoutAlign="center center" class="flex-container">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="4.653in" height="0.917in">
+                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                  d="M48.691,21.938 C48.691,31.836 40.664,39.865 30.763,39.865 C20.863,39.865 12.836,31.836 12.836,21.938 C12.836,12.035 20.863,4.008 30.763,4.008 C40.664,4.008 48.691,12.035 48.691,21.938 ZM44.598,40.326 C40.741,43.238 35.957,44.987 30.763,44.987 C25.565,44.987 20.778,43.233 16.916,40.321 C6.488,44.913 0.031,59.211 0.031,65.473 L61.496,65.473 C61.496,59.267 54.837,44.969 44.598,40.326 Z"/>
+                            <text kerning="auto" font-family="DejaVuSans" fill="rgb(0, 0, 0)" transform="matrix( 0.94076626340833, 0, 0, 0.94076626340833,140.036507376798, 22.6633134117995)" font-size="30px"> <tspan><tspan font-size="30px" font-family="Poppins" fill="#FFFFFF">Welkom</tspan> </tspan><tspan x="0" dy="1.2em"><tspan font-size="44px" font-family="Poppins" fill="#FFFFFF">Username</tspan> </tspan>
+                            </text>
+                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                  d="M86.043,-0.000 L89.026,-0.000 L89.026,-0.000 L89.026,65.008 L89.026,65.008 L86.043,65.008 L86.043,65.008 L86.043,-0.000 L86.043,-0.000 Z"/>
+                        </svg>
+                        <!-- Profile pic -->
+                        <!--                <app-profile-image fxFlex="50" ></app-profile-image>-->
+                    </div>
+
+
+                    <app-show-profile-info *ngIf="!editAble"></app-show-profile-info>
+                    <app-edit-profile-info *ngIf="editAble"></app-edit-profile-info>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+
+    <app-button  [label]="loginLabel" class="btn" [buttonType]="loginBtnClass" (onClick)="functioncall($event)" ></app-button>
+    <app-button [label]="signUpLabel" class="btn" [buttonType]="singUpBtnClass" routerLink="/signup" ></app-button>
+
+</div>

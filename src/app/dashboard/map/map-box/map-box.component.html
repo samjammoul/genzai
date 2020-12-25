@@ -1,0 +1,70 @@
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid" >
+    <div class="device-container"fxFlex="80%" fxFlex.xs="100%" fxFlex.sm="33%" >
+<p>map-box works!</p>
+
+
+
+<mgl-map
+        [style]="satellite ?'mapbox://styles/mapbox/satellite-v9' : 'mapbox://styles/mapbox/light-v9'"
+        [zoom]="[num]"
+        [center]="[6.02296544, 51.30270044]"
+>
+    <mgl-marker *ngIf="heightMap"
+        #myMarker
+        [lngLat]="[6.02296544, 51.30270044]"
+    >
+        <div
+                [ngStyle]="{
+          'background-image': 'url(../../../../assets/temp.png)',
+          'background-size': 'cover',
+          width: '250px',
+          height: '250px',
+          cursor: 'pointer',
+          opacity: opacityValue+'%'
+        }"
+        >
+        </div>
+    </mgl-marker>
+
+<app-brp-zone *ngIf="BrpZone"></app-brp-zone>
+
+
+<app-tree-width *ngIf="selected === treeWidth"></app-tree-width>
+<app-soil-scan *ngIf="selected === soilScan"></app-soil-scan>
+</mgl-map>
+    </div>
+    <div class="device-container"fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" >
+        <div class="content" fxLayout="column wrap" fxLayoutGap="16px grid">
+            <mat-label>Map style</mat-label>
+            <mat-slide-toggle [(ngModel)]="satellite"  >satellite </mat-slide-toggle>
+            <mat-divider></mat-divider>
+            <mat-label>BRP Plots</mat-label>
+            <mat-slide-toggle [(ngModel)]="BrpZone" >Brp Zone </mat-slide-toggle>
+            <mat-divider></mat-divider>
+            <mat-label>Select Marker Dataset</mat-label>
+            <mat-form-field appearance="fill">
+                <mat-label>Marker Dataset</mat-label>
+                <mat-select [(value)]="selected">
+                    <mat-option  (click)="setType(treeWidth)" >Tree width
+                    </mat-option>
+                    <mat-option (click)="setType(soilScan)">Soil scan
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-divider></mat-divider>
+            <mat-label>Opacity</mat-label>
+            <mat-slide-toggle [(ngModel)]="heightMap"  >Height Map </mat-slide-toggle>
+            <mat-slider
+                    class="example-margin"
+                    [disabled]="disabled"
+                    [invert]="invert"
+                    [max]="max"
+                    [min]="min"
+                    [step]="step"
+                    [thumbLabel]="thumbLabel"
+                    [(ngModel)]="opacityValue"
+                    [vertical]="vertical">
+            </mat-slider>
+        </div>
+    </div>
+</div>

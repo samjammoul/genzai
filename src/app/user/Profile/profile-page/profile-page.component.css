@@ -1,0 +1,63 @@
+
+.img-container{
+    padding: 10px 0 45px 10px;
+}
+
+.container{
+    width: 100%;
+    border: none;
+    border:solid 3px #6356A1;
+    border-radius: 130px;
+    padding: 100px 100px 100px 100px;
+    max-width: 700px;
+}
+
+.data-box{
+    background: blue;
+}
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+
+@media only screen and (max-width: 850px) {
+    .container{
+        padding: 50px 50px 50px 50px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .img{
+        height: 137px;
+    }
+}
+/* ___New Design____*/
+
+
+
+
+
+.mat-form-field{
+
+    margin: 3px 18px 10px 10px; ;
+    width: 302px;
+
+}
+
+
+
+.btn{
+    margin: 10px 10px 3px 13px;
+
+}
+
+
+.card{
+    transition: none !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #6356A1;
+    border:solid 2px #6356A1;
+    border-radius: 30px;
+}

@@ -1,0 +1,99 @@
+.back-div{
+    background-color: #6356A1;
+
+}
+.input-field{
+    outline: none;
+    width: 303px;
+    border: none;
+    border:solid 2px #6356A1;
+    background-color: white;
+    border-radius: 130px;
+    height: 30px;
+    padding: 0 0 0 0 ;
+}
+
+
+
+.input-field input{
+    border-bottom: none;
+    box-shadow: none;
+    padding: 0px 39px 9px 29px;
+    margin: -5px 10px 6px -11px;
+    width: 267px;
+    height: 14px;
+    color: #6356A1;
+
+
+}
+
+
+.input-field input:focus{
+    border-bottom: none ;
+    box-shadow: none;
+
+}
+
+.mat-form-field{
+
+    margin: 3px 18px 10px 10px; ;
+    width: 302px;
+
+}
+.logo{
+    margin: 11px 30px 11px 63px;
+}
+.form{
+    padding: 0 0 0 78px;
+}
+.item{
+    padding: 0 0 8px 0;
+
+}
+
+.errorText{
+    max-width: 315px;
+    margin: 0px 0px 10px 0px;
+}
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+.mat-form-field-label {
+    caret-color: green ;
+    font-size: 20px;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: green !important;
+    position: absolute;
+    margin: -10px 10px 0px 10px;
+}
+
+::ng-deep .mat-form-field-label {
+    /*change color of label*/
+    color: #6356A1 !important;
+    position: absolute;
+    margin: -9px 10px 10px 13px;
+    padding: -30px 10px 10px 10px;
+
+}
+
+.mat-error{
+    margin: 0 0 0 13px ;
+    padding: 0 0 0 0;
+}
+
+.btn{
+    margin: 10px 10px 3px 13px;
+
+}
+
+.card{
+    transition: none !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    border: none;
+    border:solid 2px white;
+    border-radius: 30px;
+}

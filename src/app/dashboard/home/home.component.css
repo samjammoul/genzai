@@ -1,0 +1,85 @@
+h1{
+    color: #6356A1;
+    font-family: "Poppins Medium", serif;
+    font-size: 28px;
+}
+.img-container{
+    padding: 10px 0 45px 10px;
+}
+
+.container{
+    border: none;
+    border:solid 0px;
+    /*padding: 50px 50px 50px 50px;*/
+    max-width: 700px;
+}
+
+.data-box{
+    background: blue;
+}
+.content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+
+@media only screen and (max-width: 850px) {
+    .container{
+        padding: 50px 50px 50px 50px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .img{
+        height: 137px;
+    }
+}
+.card{
+
+    width: 475px;
+    height: 218px;
+    border-radius: 28px;
+}
+.last-measures-group{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+
+}
+.fields-card{
+    margin-bottom: 50px;
+
+}
+#last-measure-card{
+    background: rgb(65,162,78);
+    background: linear-gradient(180deg, rgba(65,162,78,1) 0%, rgba(98,204,116,1) 100%);
+}
+#last-day-card{
+    background: rgb(199,152,18);
+    background: linear-gradient(183deg, rgba(199,152,18,1) 0%, rgba(246,187,15,1) 100%);
+}
+#last-week-measure{
+    background: rgb(226,223,240);
+    background: linear-gradient(0deg, rgba(226,223,240,1) 0%, rgba(157,131,228,1) 100%);
+}
+.menu-text{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+.mat-card-title{
+    margin: 161px 0px 0px 38px;
+    padding:  0 0 0 0 ;
+    color: #6356A1;
+    font-size: 24px;
+}
+.dropdown-menu{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}

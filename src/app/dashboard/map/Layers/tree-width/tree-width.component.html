@@ -1,0 +1,14 @@
+<mgl-marker
+    #myMarker
+    *ngFor="let data of data2"
+    [lngLat]="[data.longnitude, data.latitude]"
+>
+    <div
+            style="  height: 4px;
+  width: 4px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;"
+    >
+    </div>
+</mgl-marker>

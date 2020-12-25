@@ -1,0 +1,28 @@
+<mgl-geojson-source
+                    id="states3">
+    <mgl-feature
+            *ngFor="let data of data12.features"
+            [geometry]="data.geometry"
+    >
+    </mgl-feature>
+</mgl-geojson-source>
+<mgl-layer
+        id="state3-fills"
+        type="fill"
+        source="states3"
+        [paint]="{
+                'fill-color': 'yellow',
+                'fill-opacity': 0.5
+              }"
+>
+</mgl-layer>
+<mgl-layer
+        id="state3-borders"
+        type="line"
+        source="states3"
+        [paint]="{
+                'line-color': 'green',
+                'line-width': 2
+              }"
+>
+</mgl-layer>

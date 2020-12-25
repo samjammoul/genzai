@@ -1,0 +1,135 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxFlexFill class="back-div">
+    <mat-card class="card">
+        <mat-card-content>
+        <form class="col s12" [formGroup]="signUpForm" (submit)="registerUser()" fxLayoutAlign="stretch" fxLayout="column">
+            <app-logo class="logo" [Size]="logoSize"></app-logo>
+
+            <p>
+                <mat-form-field class="item input-field">
+                    <mat-label>First name</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="firstName" placeholder="First name">
+
+                    <div *ngIf="firstName.invalid && firstName.touched">
+
+                        <mat-error *ngIf="firstName.errors?.required ">
+                            First name is required
+                        </mat-error>
+                        <mat-error *ngIf="firstName.errors.pattern">
+                            First name must be numbers or letters or '.', '_', '-'.
+                        </mat-error>
+                        <mat-error *ngIf="lastName.errors.maxlength">
+                            First name must be maximum 30 characters long.
+                        </mat-error>
+                    </div>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field class="item input-field">
+                    <mat-label>Last name</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="lastName" placeholder="Last name">
+                    <div *ngIf="lastName.invalid && lastName.touched">
+                        <mat-error *ngIf="lastName.errors?.required ">
+                            Last name is required
+                        </mat-error>
+                        <mat-error *ngIf="lastName.errors.pattern">
+                            Last name must be numbers or letters or '.', '_', '-'.
+                        </mat-error>
+                        <mat-error *ngIf="lastName.errors.maxlength">
+                            Last name must be maximum 30 characters long.
+                        </mat-error>
+                    </div>
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field class="item input-field">
+                    <mat-label>Username</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="userName" placeholder="Username">
+                    <div *ngIf="userName.invalid && userName.touched">
+                        <mat-error *ngIf="userName.errors?.required ">
+                            Username is required
+                        </mat-error>
+                        <mat-error *ngIf="userName.errors.minlength">
+                            Username must be at least 6 characters long.
+                        </mat-error>
+                        <mat-error *ngIf="userName.errors.maxlength">
+                            Username must be maximum 30 characters long.
+                        </mat-error>
+                        <mat-error *ngIf="userName.errors.pattern">
+                            Username must be numbers or letters or '.', '_', '-'.
+                        </mat-error>
+                </div>
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field class="item input-field">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" class="form-control" formControlName="password" placeholder="Password"  >
+                    <div *ngIf="password.invalid && password.touched">
+                        <mat-error *ngIf="password.errors?.required ">
+                            Password is required
+                        </mat-error>
+                        <mat-error *ngIf="password.errors.minlength">
+                            Password must be at least 12 characters long.
+                        </mat-error>
+                        <mat-error *ngIf="password.errors.maxlength">
+                            Password must be maximum 50 characters long.
+                        </mat-error>
+                    </div>
+                </mat-form-field>
+            </p>
+
+
+            <p>
+                <mat-form-field class="item input-field">
+                    <mat-label>Confirm password</mat-label>
+                    <input matInput type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm password">
+                    <div *ngIf="confirmPassword.invalid && confirmPassword.touched">
+                        <mat-error *ngIf="confirmPassword.errors?.required ">
+                            Confirm password is required
+                        </mat-error>
+                        <mat-error *ngIf="confirmPassword.errors.minlength">
+                            Confirm password must be at least 12 characters long.
+                        </mat-error>
+                        <mat-error *ngIf="confirmPassword.errors.maxlength">
+                            Confirm password must be maximum 50 characters long.
+                        </mat-error>
+
+                    </div>
+
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field class="item input-field">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="email" placeholder="Email">
+                    <div *ngIf="email.invalid && email.touched">
+                        <mat-error *ngIf="email.errors?.required ">
+                             Email is required
+                        </mat-error>
+                        <mat-error *ngIf="email.errors?.email">
+                            Please enter a valid email
+                        </mat-error>
+                    </div>
+                </mat-form-field>
+            </p>
+            <mat-error *ngIf="signUpForm.hasError('notSame')">
+                There is no match between the passwords
+            </mat-error>
+            <mat-error  class="center" *ngIf="error$ | async as error"> {{error}} !</mat-error>
+
+
+
+
+
+            <a class="login-Btn" routerLink="/login" *ngIf="registered&& registered !== undefined" > You just registered! please login </a>
+            <mat-error *ngIf="!registered && registered !== undefined" > Something went wrong please try again! </mat-error>
+        </form>
+</mat-card-content>
+</mat-card>
+    <app-button class="btn"  [label]="signUpLabel" [buttonType]="singUpBtnClass" (onClick)="functioncall($event)" ></app-button>
+    <app-button [label]="loginLabel" class="btn" [buttonType]="loginBtnClass" routerLink="/login" ></app-button>
+</div>
+
